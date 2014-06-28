@@ -1,8 +1,8 @@
 print "Sending a Prepaid transaction to Mercury's certification network..."
 
 import json
-import requests
-from requests.auth import HTTPBasicAuth
+import lib.requests.api as API
+from lib.requests.auth import HTTPBasicAuth
 
 class GiftSale(object):
     def __init__(self, InvoiceNo):
@@ -17,11 +17,12 @@ class GiftSale(object):
                     "AcctNo":"7712950000000000316",
                     "ExpDate":"1215",
                     "Purchase":"1.00"}
-
-        r = requests.post(url, data=json.dumps(payload), auth=('112438931977591', 'xyz'))
-
+            
+        r = API.post(url, data=json.dumps(payload), auth=('112438931977591', 'xyz'))
+    
         print r.text
 
 
 
-
+myGiftSale = GiftSale(12)
+myGiftSale.process()
