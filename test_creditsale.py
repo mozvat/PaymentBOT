@@ -7,8 +7,11 @@ class Test_CreditSale:
             sale = CreditSale(1,4003000123456781,1216,1.52)
             response = sale.process()
             data = response.json()
+            print("-------------------------------")
+            print("Testing: CmdStatus == 'Approved'")
+            print("-------------------------------")
+            print("CmdStatus results: " + data['CmdStatus'])
             assert data['CmdStatus'] == "Approved"
-            print("CmdStatus == Approved")
         except AssertionError as err:
             print("CmdStatus was not equal to the value 'Approved'")
             print(err)
