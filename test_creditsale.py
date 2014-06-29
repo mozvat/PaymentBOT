@@ -1,4 +1,4 @@
-from ..creditsale import CreditSale
+from creditsale import CreditSale
 import json
 
 class Test_CreditSale:
