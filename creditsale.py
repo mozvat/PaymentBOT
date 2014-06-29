@@ -1,4 +1,6 @@
 '''
+Author: mozvat
+
 The CreditSale class is responsible for accepting the minimum required arguments to request
 a payment authorization via a HTTP POST request to Mercury's
 web services.  It will return the raw response in JSON format.
@@ -12,6 +14,7 @@ response.
 - will NOT expose any public attributes. This class is designed with a command pattern in mind and
 not deisned to hold stateful data. 
 '''
+
 import json
 import lib.requests.api as API   
 from lib.requests.auth import HTTPBasicAuth
@@ -29,17 +32,34 @@ class CreditSale(object):
 
         payload = {'InvoiceNo': self.invoiceNo,
                     'RefNo': self.invoiceNo,
-                    'Memo': "Ozvat",
+                    'Memo': 'Ozvat',
                     'AcctNo': self.acctNo,
                     'ExpDate': self.expDate,
                     'Purchase': self.purchase}
 
         response = API.post(url, data = json.dumps(payload), auth=('112438931977591', 'xyz'))   
-        
-        #print response
         return response
 
-#unit test script
-#myCreditSale = CreditSale(1,4003000123456781,1216,1.52)
-#myCreditSale.process()
-#print myCreditSale.getResponse()
+'''
+------------------------
+---Unit test script ----
+------------------------
+
+
+Use this for quick check testing,
+otherwise leverage "nosetests"
+
+'''
+
+
+'''
+myCreditSale = CreditSale(1,4003000123456781,1216,1.52)
+response = myCreditSale.process()
+data = response.json()
+
+print data['CmdStatus']
+
+#print data
+'''
+
+
