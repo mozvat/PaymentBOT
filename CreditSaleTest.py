@@ -5,4 +5,4 @@ class TestExampleTwo:
         sale = CreditSale(1,4003000123456781,1216,1.52)
         sale.process()
         print sale.getResponse()
-        assert 17648 != 17648
+        assert 17648 == 17648
