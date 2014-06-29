@@ -17,12 +17,25 @@ newer but older technologies has been a blast!!
 My technology stack:
 -------------------
 
-1) Raspberry PI
-2) Debian OS
-3) Python IDLE 
-4) Python 2.7.5 
-5) NoseTests Library for unit testing
-6) Requests HTTPLibrary
-7) JSON Library 
-8) GitHub 
-9) Web hooked with Travis.CI
+1) Raspberry PI  
+ 
+2) Debian OS  
+
+3) Python IDLE  
+ 
+4) Python 2.7.5  
+ 
+5) NoseTests Library for unit testing  
+
+6) Requests HTTPLibrary  
+
+7) JSON Library  
+ 
+8) GitHub  
+ 
+9) Web hooked with Travis.CI  
+
+
+Continuous Integration Link:  
+  
+https://travis-ci.org/mozvat/RaspberryPI
