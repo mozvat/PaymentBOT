@@ -5,3 +5,5 @@ python:
 script: 
   - nosetests test_creditsale.py
   - nosetests test_encryptedcreditsale.py
+notifications:
+  irc: "chat.freenode.net#mozvat-devl"
