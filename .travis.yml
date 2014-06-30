@@ -2,7 +2,8 @@ language: python
 python:
   - "2.7"
 # command to run tests
-script: 
+script:
+  - python setup.py 
   - nosetests test_creditsale.py
   - nosetests test_encryptedcreditsale.py
 notifications:
@@ -10,6 +11,6 @@ notifications:
     channels:
       - "chat.freenode.net#mozvat-dev"
     template:
-      - "%{repository}#%{build_number} (%{branch} - %{commit} : %{author}): %{message}"
-      - "Change view : %{compare_url}"
-      - "Build details : %{build_url}"
+      - "Author: %{author}" 
+	  - "Author email : %{author_email}"
+      - "Prouduct description : %{description}"
