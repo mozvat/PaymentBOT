@@ -6,4 +6,8 @@ script:
   - nosetests test_creditsale.py
   - nosetests test_encryptedcreditsale.py
 notifications:
-  irc: "chat.freenode.net#mozvat-dev"
+  irc: "chat.freenode.net#mozvat-dev" 
+    template:
+      - "%{repository}#%{build_number} (%{branch} - %{commit} : %{author}): %{message}"
+      - "Change view : %{compare_url}"
+      - "Build details : %{build_url}"
