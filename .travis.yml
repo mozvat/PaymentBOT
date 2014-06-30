@@ -3,7 +3,6 @@ python:
   - "2.7"
 # command to run tests
 script:
-  - python setup.py 
   - nosetests test_creditsale.py
   - nosetests test_encryptedcreditsale.py
 notifications:
@@ -11,6 +10,6 @@ notifications:
     channels:
       - "chat.freenode.net#mozvat-dev"
     template:
-      - "Author: %{author}" 
-	  - "Author email : %{author_email}"
-      - "Prouduct description : %{description}"
+      - "Author: Matt Ozvat" 
+	  - "Author email : mozvat@gmail.com"
+      - "Prouduct description : Raspberry Payment Device"
