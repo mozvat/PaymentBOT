@@ -9,7 +9,3 @@ notifications:
   irc:
     channels:
       - "chat.freenode.net#mozvat-dev"
-    template:
-      - "Author: Matt Ozvat" 
-	  - "Author email : mozvat@gmail.com"
-      - "Prouduct description : Raspberry Payment Device"
