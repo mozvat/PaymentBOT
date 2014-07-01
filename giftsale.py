@@ -31,9 +31,8 @@ class GiftSale(object):
         url = 'https://w1.mercurycert.net/PaymentsAPI/Prepaid/Sale'
 
         payload = {'InvoiceNo': self.invoiceNo,
-                    'RefNo': self.invoiceNo,
+		    'RefNo': self.invoiceNo,
                     'AcctNo': self.accountNo,
-                    'ExpDate': self.expDate,
                     'Purchase': self.purchase
                     }
             
