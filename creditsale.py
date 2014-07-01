@@ -35,7 +35,8 @@ class CreditSale(object):
                     'Memo': 'Ozvat',
                     'AcctNo': self.acctNo,
                     'ExpDate': self.expDate,
-                    'Purchase': self.purchase}
+                    'Purchase': self.purchase
+                    }
 
         response = API.post(url, data = json.dumps(payload), auth=('112438931977591', 'xyz'))   
         return response
