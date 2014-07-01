@@ -32,14 +32,12 @@ class GiftSale(object):
 
         payload = {'InvoiceNo': self.invoiceNo,
                     'RefNo': self.invoiceNo,
-                    'Memo': 'Ozvats POS',
                     'AcctNo': self.accountNo,
                     'ExpDate': self.expDate,
                     'Purchase': self.purchase
                     }
             
         response = API.post(url, data=json.dumps(payload), auth=('112438931977591', 'xyz'))
-    
         return response
 
 
@@ -55,11 +53,11 @@ class GiftSale(object):
     Use below code for quick check testing,
     otherwise leverage "nosetests"
     
-    
-sale = GiftSale(11git 33,7712950000000000316,1216,1.57)
+sale = GiftSale(123,7712950000000000316,1216,1.57)
 response = sale.process()
-print response
 data = response.json()
-print data['CmdStatus']
-
+print "Invoice Number: " + data['InvoiceNo']
+print "Account Number: " + data['AcctNo']
+print "Transaction Status: " + data['CmdStatus']
+print "Transaction Response: " + data['TextResponse']
 '''
