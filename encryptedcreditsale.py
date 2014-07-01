@@ -1,4 +1,22 @@
 
+'''
+    Author: mozvat
+    
+    The EncrytpedCreditSale class is responsible for accepting the minimum required arguments to request
+    a payment authorization via a HTTP POST request to Mercury's
+    web services.  It will return the raw response in JSON format.
+    
+    #Specificity guidelines:
+    
+    This class:
+    - will NOT format response data from Web Services. It will allow the consumer to format the
+    response.
+    - However, this class WILL format input data and transform to the approrpriate request format.
+    - will NOT expose any public attributes. This class is designed with a command pattern in mind and
+    not deisned to hold stateful data.
+    '''
+
+
 import json
 import lib.requests.api as API
 from lib.requests.auth import HTTPBasicAuth
