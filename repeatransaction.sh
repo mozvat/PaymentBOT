@@ -1,5 +1,5 @@
+clear
 while true
-	clear
 	do
 		echo "----------------------------------------------"
 		echo "Pulling latest RaspberryPI Version from GitHub" 
