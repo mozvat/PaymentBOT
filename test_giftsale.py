@@ -11,6 +11,7 @@ class Test_GiftSale:
             print("Testing: AcctNo == 771295XXXXXXXXX0316")
             print("-------------------------------")
             assert data["AcctNo"] == "771295XXXXXXXXX0316"
+	   # print data
         except AssertionError as err:
             print("RESULTS: AcctNo was not equal to the value 771295XXXXXXXXX0316")
             print(err)
