@@ -61,7 +61,8 @@ class EncryptedGiftSale(object):
 
 sale = EncryptedGiftSale(12345,1.57,"2F8248964608156B2B1745287B44CA90A349905F905514ABE3979D7957F13804705684B1C9D5641C","9500030000040C200026")
 response = sale.process()
-    
+
+
 
 data = response.json()
 print "Invoice Number: " + data['InvoiceNo']
