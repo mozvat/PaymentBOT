@@ -13,7 +13,7 @@ class Test_EncryptedGiftSale:
             print("Testing: AcctNo == '400555XXXXXX0480'")
             print("-------------------------------")
             #print("AcctNo results: " + data["AcctNo"])
-            assert 1 == "NEED TO ASSERT DATA CORRECTLY BUT HAVE ENCRYPTION ISSUES"
+            assert "1" == "NEED TO ASSERT DATA CORRECTLY BUT HAVE ENCRYPTION ISSUES"
 #assert data["AcctNo"] == "400555XXXXXX0480"
         except AssertionError as err:
             print("AcctNo was not equal to the value '400555XXXXXX0480'")
