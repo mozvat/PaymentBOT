@@ -13,5 +13,5 @@ while true
 		sleep 1
 		git push
 		echo "---------------------------"
-		sleep 1000
+		sleep 300
 	done
