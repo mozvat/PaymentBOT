@@ -8,3 +8,9 @@ script:
   - nosetests test_encryptedcreditsale.py
 notifications:
   irc: "chat.freenode.net#mozvat-dev"
+  irc:
+    channels:
+      - "chat.freenode.net#mozvat-dev"
+    template:
+      - "%{repository} (%{commit}) : %{message} %{foo} "
+      - "Build details: %{build_url}"
