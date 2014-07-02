@@ -12,5 +12,5 @@ notifications:
     channels:
       - "chat.freenode.net#mozvat-dev"
     template:
-      - "%{repository} (%{commit}) : %{message} %{foo} "
-      - "Build details: %{build_url}"
+      - "%{repository} %{commit_message}"
+      - "Build details: %{result}"
