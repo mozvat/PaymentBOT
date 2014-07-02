@@ -51,9 +51,11 @@ class GiftSale(object):
     
     Use below code for quick check testing,
     otherwise leverage "nosetests"
-    
+
+
 sale = GiftSale(123,7712950000000000316,1216,1.57)
 response = sale.process()
+print response
 data = response.json()
 print "Invoice Number: " + data['InvoiceNo']
 print "Account Number: " + data['AcctNo']
