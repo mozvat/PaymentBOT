@@ -12,9 +12,11 @@ notifications:
     channels:
       - "chat.freenode.net#mozvat-dev"
     template:
+      - "-------------------------"
       - "Repository: %{repository}"
       - "Author: %{author}" 
       - "Commit message: %{commit_message}"
       - "Build results: %{result}"
       - "Build number: %{build_number}"
       - "Build details: %{build_url}"
+      - "-------------------------"
