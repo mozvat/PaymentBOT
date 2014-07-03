@@ -57,9 +57,9 @@ class EncryptedGiftSale(object):
     
     Use below code for quick check testing,
     otherwise leverage "nosetests"
+'''
 
-
-sale = EncryptedGiftSale(12345,1.57,"2F8248964608156B2B1745287B44CA90A349905F905514ABE3979D7957F13804705684B1C9D5641C","9500030000040C200026")
+sale = EncryptedGiftSale(12345,1.00,"C8C8F9536826D5450E734953206E7F4DC6812C6858037F5ABF23D9F83F948AF7","9012090B06349B000056")
 response = sale.process()
 
 
@@ -69,5 +69,5 @@ print "Invoice Number: " + data['InvoiceNo']
 print "Account Number: " + data['AcctNo']
 print "Transaction Status: " + data['CmdStatus']
 print "Transaction Response: " + data['TextResponse']
+print sale
 
-'''
