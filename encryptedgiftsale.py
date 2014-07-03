@@ -57,7 +57,7 @@ class EncryptedGiftSale(object):
     
     Use below code for quick check testing,
     otherwise leverage "nosetests"
-'''
+
 
 sale = EncryptedGiftSale(12345,1.00,"C8C8F9536826D5450E734953206E7F4DC6812C6858037F5ABF23D9F83F948AF7","9012090B06349B000056")
 response = sale.process()
@@ -71,3 +71,4 @@ print "Transaction Status: " + data['CmdStatus']
 print "Transaction Response: " + data['TextResponse']
 print sale
 
+'''
