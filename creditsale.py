@@ -50,17 +50,17 @@ class CreditSale(object):
 Use this for quick check testing,
 otherwise leverage "nosetests"
 
-'''
 
 
-'''
+
+
 myCreditSale = CreditSale(1,4003000123456781,1216,1.52)
 response = myCreditSale.process()
 data = response.json()
 
 print data['CmdStatus']
 
-#print data
-'''
+print data
 
+'''
 
