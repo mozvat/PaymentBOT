@@ -19,6 +19,24 @@ while true
  		echo "Test file: test_creditsale.py"
  		sleep 1
 		echo "Processing..."
-        nosetests test_creditsale.py
-        sleep 300
+		nosetests test_creditsale.py
+		echo "---------------------------"
+		echo "Executing: Encrypted Credit-Transaction"
+		echo "Test file: test_encryptedcreditsale.py"
+		sleep 1
+		echo "Processing..."
+		nosetests test_encryptedcreditsale.py
+                echo "---------------------------"
+		echo "Executing: Encryped Gift-Transaction"
+		echo "Test file: test_encryptedgiftsale.py"
+		sleep 1
+		echo "Processing..."
+		nosetests test_encryptedgiftsale.py
+		sleep 1
+		echo "."
+		sleep 1
+		echo "."
+		sleep 1
+		echo "Hibernating for 10 minutes..."
+		sleep 600
   	done
