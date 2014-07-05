@@ -17,7 +17,8 @@ while (selection != 4):
     print "[1] - Start listening"
     print "[2] - Congifuration"
     print "[3] - Status"
-    print "[4] - Quit"
+    print "[4] - Test"
+    print "[5] - Quit"
     print "---------------------------------"
 
     selection = input("Selection: ")
@@ -48,13 +49,19 @@ while (selection != 4):
 
     if  selection == 2:
         print "Congifigure"
-
     if  selection == 3:
         print "Status"
-
+    if  selection == 4:
+        print "Test Swipe"
+        file = open("swipe.txt", "r")
+        trackData  = file.read()
+        parse()
     else:
         print "Exiting System"
 
+def parse():
+    print "parsed"
+    return ""
 
 
 def main(argv=None):
