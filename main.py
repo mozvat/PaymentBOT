@@ -1,11 +1,14 @@
+'''
+Main entry or admin panel to begin the listener or perform other admin features.
+
+'''
+
 from encryptedcreditsale import EncryptedCreditSale
 import sys
 
 print "--------------------------------------"
 print "Welcome to the RaspberryPI POS system!"
 print "--------------------------------------\n\n"
-
-
 
 selection = 0
 
