@@ -15,5 +15,6 @@ class Test_EncryptedGiftSale:
             assert data["AcctNo"] == "605011XXXXXXXXX0146"
         except AssertionError as err:
             print("AcctNo was not equal to the value '605011XXXXXXXXX0146'")
+            print(" Added comment to commit a test")
             print(err)
             raise
