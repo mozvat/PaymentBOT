@@ -12,7 +12,7 @@ print "--------------------------------------\n\n"
 
 selection = 0
 
-while (selection != 4):
+while (selection != "5"):
 
     print "---------------------------------"
     print "-            MENU              -"
@@ -24,10 +24,10 @@ while (selection != 4):
     print "[5] - Quit"
     print "---------------------------------"
 
-    selection = input("Selection: ")
+    selection = raw_input("Selection: ")
 
-    if selection == 1:
-
+    if selection == "1":
+ 
         merchantThreshold = 2
         transactionCount = 0
 
@@ -50,22 +50,21 @@ while (selection != 4):
             transactionCount = transactionCount + 1
             print "Transaction count: " + transactionCount
 
-    if  selection == 2:
+    if  selection == "2":
         print "Congifigure"
-    if  selection == 3:
+    if  selection == "3":
         print "Status"
-    if  selection == 4:
+    if  selection == "4":
         print "Test Swipe"
         file = open("swipe.txt", "r")
         trackData  = file.read()
-        parse()
+	print "This is the trackData" + trackData
+	
     else:
         print "Exiting System"
 
 def parse():
-    print "parsed"
-    return ""
-
+    print "parse method"
 
 def main(argv=None):
     if argv is None:
