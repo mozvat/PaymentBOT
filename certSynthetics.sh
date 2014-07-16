@@ -1,3 +1,5 @@
+say "Beetle Juice now awake"
+
 while true
     do
         echo "----------------------------------------------"
