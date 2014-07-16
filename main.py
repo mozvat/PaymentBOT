@@ -31,7 +31,7 @@ while (selection != "5"):
         merchantThreshold = 2
         transactionCount = 0
 
-        while (merchantThreshold < transactionCount):
+        while (merchantThreshold > transactionCount):
         
             #Wait for Swipe:
             trackData = raw_input("\n\nSwipe...\n\n")
@@ -63,9 +63,21 @@ while (selection != "5"):
     else:
         print "Exiting System"
 
-def parse():
+def parse(trackdata):
     print "parse method"
+    trackData = trackdata        
+    containsEncryptedBlock, containsEncryptedKey, genericData = trackData.split("||")
+    print containsEncryptedKey
+    generic1, generic2, generic3, encryptedBlock = containsEncryptedBlock.split("|")
 
+    generic4, generic5, generic6, generic7, encryptedKey, generic8 = containsEncryptedKey.split("|")
+
+    myEncryptedCreditSale = EncryptedCreditSale(122, encryptedBlock, encryptedKey, 1.25)
+    response = myEncryptedCreditSale.process()
+    print response
+    data = response.json()
+    print data["TextResponse"]
+    
 def main(argv=None):
     if argv is None:
         argv = sys.argv
