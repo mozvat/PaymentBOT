@@ -1,44 +1,58 @@
-say "Beetle Juice now awake"
+say "I am Beetle Juice"
 
 while true
     do
         echo "----------------------------------------------"
-		echo "Pulling latest RaspberryPI Version from GitHub" 
-		echo "Accessing GitHub/mozvat/RaspberryPI"
+		echo "@BG: I am running synthetics."
 		sleep 1		
 		echo "."
 		sleep 1
 		echo "."
 		sleep 1
-		echo "---------------------------"
-		echo "Executing: Gift-Transaction"
+		echo "@BG: Executing a Gift transaction."
 		echo "Test file: test_giftsale.py"		
 		sleep 1
 		echo "Processing..."		
 		nosetests test_giftsale.py
 		echo "---------------------------"
-		echo "Executing: Credit-Transaction"
+		sleep 1
+		echo '.'
+		sleep 1
+		echo '.'
+		sleep 1
+		echo "@BG: Executing a Credit transaction."
  		echo "Test file: test_creditsale.py"
  		sleep 1
 		echo "Processing..."
 		nosetests test_creditsale.py
 		echo "---------------------------"
-		echo "Executing: Encrypted Credit-Transaction"
+		sleep 1
+		echo '.'
+		sleep 1
+		echo '.'
+		sleep 1
+		echo "@BG: Executing an encrypted Credit transaction."
 		echo "Test file: test_encryptedcreditsale.py"
 		sleep 1
 		echo "Processing..."
 		nosetests test_encryptedcreditsale.py
-                echo "---------------------------"
-		echo "Executing: Encryped Gift-Transaction"
+                echo "------------------------------"
+		sleep 1
+		echo '.'
+		sleep 1
+		echo '.'
+		sleep 1
+		echo "@BG: Executing an encryped Gift transaction."
 		echo "Test file: test_encryptedgiftsale.py"
 		sleep 1
 		echo "Processing..."
 		nosetests test_encryptedgiftsale.py
+		echo "------------------------------"
 		sleep 1
 		echo "."
 		sleep 1
 		echo "."
 		sleep 1
-		echo "Hibernating for 10 minutes..."
-		sleep 600
+		echo "@BG: I am hibernating for 20 minutes..."
+		sleep 1200
   	done
