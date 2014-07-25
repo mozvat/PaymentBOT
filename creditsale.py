@@ -4,6 +4,7 @@ Author: mozvat
 The CreditSale class is responsible for accepting the minimum required arguments to request
 a payment authorization via a HTTP POST request to Mercury's
 web services.  It will return the raw response in JSON format.
+Adding to invoke CI.
 
 #Specificity guidelines:
 
