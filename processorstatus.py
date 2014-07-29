@@ -32,13 +32,13 @@ class ProcessorStatus(object):
 	with open("processorlog.json") as json_file:
 		result = load(json_file)
 		return result
-    def set(self):
+    def set(self, totalcreditsales, failedcreditsales, totalgiftsales, failedgiftsales):
 	with open("processorlog.json", "w") as json_file:
 		json.dump({
-			'TotalCreditSales': self.totalCreditSales, 
-			'FailedCreditSales': self.failedCreditSales,
-			'TotalGiftSales': self.totalGiftSales,
-			'FailedGiftSales': self.failedGiftSales
+			'TotalCreditSales': totalcreditsales,
+			'FailedCreditSales': failedcreditsales,
+			'TotalGiftSales': totalgiftsales,
+			'FailedGiftSales': failedgiftsales
 			}, json_file, sort_keys=True, indent=4, separators=(',', ': '))
 	    	json_file.close()
 
@@ -50,4 +50,5 @@ Use this for quick check testing,
 otherwise leverage "nosetests"
 '''
 processorStatus = ProcessorStatus()
+processorStatus.set(totalcreditsales = 1, failedcreditsales = 2, totalgiftsales = 3, failedgiftsales = 4) 
 print processorStatus.get() 
