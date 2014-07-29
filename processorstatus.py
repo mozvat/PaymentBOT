@@ -16,10 +16,6 @@ not deisned to hold stateful data.
 
 import json
 from json import dumps, load
-n = [1, 2, 3]
-s = ["a", "b" , "c"]
-x = 0
-y = 0
 
 class ProcessorStatus(object):
     def __init__(self):
@@ -32,10 +28,11 @@ class ProcessorStatus(object):
 	self.totalEncryptedGiftSales = 0
 	self.failedEncryptedGiftSales = 0
 
-    def Get(self):        
-	with open("ProcessorStatus.json") as json_file:
-    	json_data = json.load(json_file)
-    	print(json_data)
+    def Get(self):
+	print("Get some data")        
+	#with open("ProcessorStatus.json") as json_file:
+    	#json_data = json.load(json_file)
+    	#print(json_data)
     
     def Set(self):
         payload = {'InvoiceNo': self.invoiceNo,
@@ -46,39 +43,26 @@ class ProcessorStatus(object):
                     'Purchase': self.purchase
                     }
 
-    def Parse(self):
-from json import dumps, load
-	n = [1, 2, 3]
-	s = ["a", "b" , "c"]
-	x = 0
-	y = 0
-    	with open("text", "r") as file:
-    		print(file.readlines())
-	
-	with open("text", "w") as file:
-    		dumps({'numbers':n, 'strings':s, 'x':x, 'y':y}, file, indent=4)
-		file.close()
+    def Process(self):
+	with open("processorlog.json", "w") as json_file:
+		json.dump({
+			'TotalCreditSales': self.totalCreditSales, 
+			'FailedCreditSales': self.failedCreditSales,
+			'TotalGiftSales': self.totalGiftSales
+			}, json_file, sort_keys=True, indent=4, separators=(',', ': '))
+	    	json_file.close()
 
-	with open("text") as file:
-    		result = load(file)
-	
-	file.close()
-	print (type(result))
-	print (result.keys())
-	print (result)
-
+	with open("processorlog.json") as json_file:
+    		result = load(json_file)
+		print result
 
 '''
 ------------------------
 ---Unit test script ----
 ------------------------
-
-
 Use this for quick check testing,
 otherwise leverage "nosetests"
-
-print data['CmdStatus']
-
-print data
-
 '''
+
+processorStatus = ProcessorStatus()
+processorStatus.Process() 
