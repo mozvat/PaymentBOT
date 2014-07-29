@@ -1,3 +1,5 @@
+#/usr/lib/cgi-bin
+
 '''
 Author: mozvat
 
