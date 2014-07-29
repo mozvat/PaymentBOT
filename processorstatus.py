@@ -28,33 +28,19 @@ class ProcessorStatus(object):
 	self.totalEncryptedGiftSales = 0
 	self.failedEncryptedGiftSales = 0
 
-    def Get(self):
-	print("Get some data")        
-	#with open("ProcessorStatus.json") as json_file:
-    	#json_data = json.load(json_file)
-    	#print(json_data)
-    
-    def Set(self):
-        payload = {'InvoiceNo': self.invoiceNo,
-                    'RefNo': self.invoiceNo,
-                    'Memo': 'Ozvat-v2',
-                    'AcctNo': self.acctNo,
-                    'ExpDate': self.expDate,
-                    'Purchase': self.purchase
-                    }
-
-    def Process(self):
+    def get(self):
+	with open("processorlog.json") as json_file:
+		result = load(json_file)
+		return result
+    def set(self):
 	with open("processorlog.json", "w") as json_file:
 		json.dump({
 			'TotalCreditSales': self.totalCreditSales, 
 			'FailedCreditSales': self.failedCreditSales,
-			'TotalGiftSales': self.totalGiftSales
+			'TotalGiftSales': self.totalGiftSales,
+			'FailedGiftSales': self.failedGiftSales
 			}, json_file, sort_keys=True, indent=4, separators=(',', ': '))
 	    	json_file.close()
-
-	with open("processorlog.json") as json_file:
-    		result = load(json_file)
-		print result
 
 '''
 ------------------------
@@ -63,6 +49,5 @@ class ProcessorStatus(object):
 Use this for quick check testing,
 otherwise leverage "nosetests"
 '''
-
 processorStatus = ProcessorStatus()
-processorStatus.Process() 
+print processorStatus.get() 
