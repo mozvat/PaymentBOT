@@ -1,5 +1,3 @@
-#/usr/lib/cgi-bin
-
 '''
 Author: mozvat
 
@@ -17,7 +15,6 @@ not deisned to hold stateful data.
 '''
 
 import json
-from json import dumps, load
 
 class ProcessorStatus(object):
     def __init__(self):
@@ -32,11 +29,11 @@ class ProcessorStatus(object):
 
     def get(self):
 	with open("processorlog.json") as json_file:
-		result = load(json_file)
+		result = json.load(json_file)
 		return result
     def set(self, totalcreditsales, failedcreditsales, totalgiftsales, failedgiftsales):
 	with open("processorlog.json", "w") as json_file:
-		json.dump({
+		json.dumps({
 			'TotalCreditSales': totalcreditsales,
 			'FailedCreditSales': failedcreditsales,
 			'TotalGiftSales': totalgiftsales,
@@ -49,8 +46,8 @@ class ProcessorStatus(object):
 ---Unit test script ----
 ------------------------
 Use this for quick check testing,
-otherwise leverage "nosetests"
-'''
+otherwise leverage "nosetest
 processorStatus = ProcessorStatus()
-processorStatus.set(totalcreditsales = 1, failedcreditsales = 2, totalgiftsales = 3, failedgiftsales = 4) 
-print processorStatus.get() 
+#processorStatus.set(totalcreditsales = 1, failedcreditsales = 2, totalgiftsales = 3, failedgiftsales = 4) 
+print processorStatus.get()
+'''
