@@ -33,7 +33,7 @@ class EncryptedCreditSale(object):
         url = 'https://w1.mercurycert.net/PaymentsAPI/Credit/Sale'
         
         payload = {'InvoiceNo': self.invoiceNo,
-                    'Memo': 'Ozvat Python test',
+                    'Memo': 'Ozvat-V3 PaymentBOT',
                     'Purchase': self.purchase,
                     'Frequency': 'OneTime',
                     'RecordNo': 'RecordNumberRequested',

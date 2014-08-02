@@ -33,7 +33,7 @@ class CreditSale(object):
 
         payload = {'InvoiceNo': self.invoiceNo,
                     'RefNo': self.invoiceNo,
-                    'Memo': 'Ozvat-v2',
+                    'Memo': 'Ozvat-V3 PaymentBOT',
                     'AcctNo': self.acctNo,
                     'ExpDate': self.expDate,
                     'Purchase': self.purchase
