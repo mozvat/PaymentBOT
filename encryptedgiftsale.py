@@ -33,7 +33,7 @@ class EncryptedGiftSale(object):
         payload = {
                     "InvoiceNo": self.invoiceNo,
                     "RefNo": self.invoiceNo,
-                    "Memo": "Ozvat Python test",
+                    'Memo': 'Ozvat-V3 PaymentBOT',
                     "Purchase": self.purchase,
                     "Frequency": "OneTime",
                     "RecordNo": "RecordNumberRequested",
