@@ -30,10 +30,13 @@ class GiftSale(object):
         # TranType: {Credit,PrePaid, PayPal, etc} / TranCode {Sale, Return, Void}'
         url = 'https://w1.mercurycert.net/PaymentsAPI/Prepaid/Sale'
 
-        payload = {'InvoiceNo': self.invoiceNo,
-		    'RefNo': self.invoiceNo,
+        payload = {
+                    'InvoiceNo': self.invoiceNo,
+                    'RefNo': self.invoiceNo,
+                    'Memo': 'Ozvat-V3 PaymentBOT',
                     'AcctNo': self.accountNo,
                     'Purchase': self.purchase
+                    
                     }
             
         response = API.post(url, data=json.dumps(payload), auth=('112438931977591', 'xyz'))
