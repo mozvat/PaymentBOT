@@ -7,6 +7,8 @@ script:
   - nosetests test_creditsale.py
   - nosetests test_encryptedcreditsale.py
   - nosetests test_encryptedgiftsale.py
+# - nosetests test_tokencreditreturn.py
+# - nosetests test_encryptedgiftreturn.py
 notifications:
   irc: "chat.freenode.net#mozvat-dev"
   irc:
