@@ -40,6 +40,4 @@ Continuous Integration Link:
   
 https://travis-ci.org/mozvat/RaspberryPI
 
-I created a sequence diagram describing the C.I flow. 
-
-![alt tag](https://raw.githubusercontent.com/mozvat/RaspberryPI/master/TransberryCI.jpg)
+Check out the sequence diagram describing the C.I flow: TrasberryCI.jpg
