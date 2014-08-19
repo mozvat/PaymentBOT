@@ -1,4 +1,4 @@
-RaspberryPI
+PaymentBOT with the RaspberryPI
 ===========
 
 Researching and developing concepts around hardware and software solutions 
@@ -41,3 +41,11 @@ Continuous Integration Link:
 https://travis-ci.org/mozvat/RaspberryPI
 
 Check out the sequence diagram describing the C.I flow: TrasberryCI.jpg
+
+![alt tag](https://raw.githubusercontent.com/mozvat/PaymentBOT/master/TransberryCI.jpg)
+
+
+
+
+
+
