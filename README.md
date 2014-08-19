@@ -8,7 +8,7 @@ within the payments technology industry.
 I decided to create a mini Point of Sale that accepts encrypted magnetic data with 
 a RaspberryPI. http://www.raspberrypi.org/ 
 
-![alt tag](https://raw.githubusercontent.com/mozvat/RaspberryPI/master/RaspBerryPI.jpg)
+![alt tag](https://raw.githubusercontent.com/mozvat/PaymentBOT/master/RaspBerryPI.jpg)
 
 This project has been a very enjoyable projects!! Mixing 
 newer but older technologies has been a blast!!
